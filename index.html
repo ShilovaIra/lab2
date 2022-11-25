@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>First lab</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #ffffff;
+            font-family: "Gill Sans", sans-serif;
+        }
+
+        img {
+            display: block;
+            max-width: 100%;
+        }
+
+        header {
+            width: 100%;
+        }
+
+        .img-logo {
+            display: block;
+            width: 10%;
+            margin: 10px auto;
+        }
+        
+        footer {
+            display: flex;
+            width: 100%;
+            border-top: solid 5px #616161;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .footer-contacts, .footer-about-us, .footer-help-and-support, .footer-privilegies {
+            width: 25%;
+        }
+
+        .footer-content-tex-th1 {
+            padding-top: 10px;
+            font-size: 20px;
+        }
+
+        .footer-content-tex-th2 {
+            text-align: center;
+            font-size: 15px;
+        }
+
+        .footer-hr {
+            margin-top: 5px;
+	        height: 10px;
+	        border: none;
+	        border-top: 2px solid rgb(180, 180, 180);
+        }
+
+        .search-menu {
+            margin-top: 10px;
+            position: relative;
+            flex: 1;
+        }
+
+        .search-field {
+            width: 90%;
+            box-sizing: border-box;
+            border: 2px solid rgb(54, 54, 54);
+            font-size: 16px;
+            background-color: white;
+            background-image: url('searchicon.png');
+            background-size: 1%;
+            background-position: 10px; 
+            background-repeat: no-repeat;
+            padding: 12px 20px 12px 40px;
+        }
+
+        .search-button {
+            position: absolute;
+            font-size: 30px;
+            border-radius: 0px;
+            width: 10%;
+            background-color: rgb(41, 40, 39);
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+            cursor: pointer;  
+        }
+
+        .search-list.active {
+            display: block;
+        }
+
+        .search-list {
+            display: none;
+            border: 1px solid black;
+            position: absolute;
+            width: 90%;
+        }
+
+        .product-list {
+            width: 10%;
+        }
+
+        .search-button:hover {
+            background-color: rgb(58, 58, 58);
+        }
+
+        .main-menu {
+            width: 100%;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            align-content: center;
+            justify-content: center;
+            margin: 5px 20px;
+        }
+
+        .main-menu-option { 
+            padding: 5px 70px;
+        }
+
+        .product-main-content {
+            display: flex;
+        }
+
+        .product-list-menu {
+            width: 20%;
+        }
+
+        .product-cards-menu {
+            margin: 10px;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            column-gap: 30px;
+            row-gap: 30px;
+        }
+
+        .product-name { 
+            margin: 5px;
+            font-size: 20px;
+            color: #484848;
+        }
+
+        .product-list-menu-li {
+            margin: 10px;
+            font-size: 20px;
+        }
+
+        .hr-product-list {
+            width: 80%;
+            margin-left: 5px;
+        }
+
+        a {
+            text-decoration: none;
+            color: #484848;
+        }
+
+        .product-cost {
+            margin: 5px;
+            color: olive;
+        }
+
+        .search-list__item {
+            color: rgb(54, 54, 54);
+            padding: 4px 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+        
+    </style>
+</head>
+<body>
+    <header>
+        <img class="img-logo" src="./logo.png" alt="furla" />
+    </header>
+
+    <div class="main-content">
+
+        <div class="search-menu">
+            <input class="search-field" id="search" type="text" name="search" placeholder="Search...">
+            <button class="search-button" id="search-btn">Search</button>
+            <div class="search-list" id="search-list"></div>
+        </div>
+
+        <div class="main-menu"> 
+            <div class="main-menu-option"> 
+                <a href="#"> Сумки </a>
+            </div>
+            <div class="main-menu-option"> 
+                <a href="#"> Коллекции  </a>
+            </div>
+            <div class="main-menu-option"> 
+                <a href="#"> Для женщин </a>
+            </div>
+            <div class="main-menu-option"> 
+                <a href="#">Для Мужчин </a>
+            </div>
+        </div>
+
+        <div class="product-main-content">
+            <div class="product-list-menu">
+                <ul class="product-list-menu-ul">
+                    <li class="product-list-menu-li"> <a href="#"> Рюкзаки </a> </li>
+                    <hr class="hr-product-list">
+                    <li class="product-list-menu-li"> <a href="#"> Кошельки </a> </li>
+                    <hr class="hr-product-list">
+                    <li class="product-list-menu-li"> <a href="#"> Сумки </a> </li>
+                    <hr class="hr-product-list">
+                    <li class="product-list-menu-li"> <a href="#"> Спортивные сумки </a> </li>
+                    <hr class="hr-product-list">
+                    <li class="product-list-menu-li"> <a href="#"> Аксессуары для сумок </a> </li>
+                  </ul>
+            </div>
+
+            <div class="product-cards-menu">
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag1.png">
+                    </div>
+
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#"> FURLA VARSITY STYLE </a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>    
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag2.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA SPORT</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag3.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA VARSITY STYLE</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag4.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA PRIMULA</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag5.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA OPPORTUNITY</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag6.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA OPPORTUNITY</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag7.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA VARSITY STYLE</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+
+                <div class="product-card">
+                    <div class="product-photo">
+                        <img class="photo" src="./bag8.png">
+                    </div>
+                    <div class="product-info">
+                        <div class="product-name">
+                            <a href="#">FURLA PRIMULA</a>
+                        </div>
+                        <div class="product-cost">
+                            0,000 руб.
+                        </div>
+                    </div>   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <footer class="footer-content">
+            <div class="footer-contacts">
+                <div class="footer-content-tex-th1">
+                    Нужна помощь?
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-content-tex-th2">
+                    Часто задаваемые вопросы 
+                    <br> 
+                    Связаться с нами 
+                    <br> 
+                    Политика Cookies
+                </div>
+            </div>
+            <div class="footer-about-us">
+                <div class="footer-content-tex-th1">
+                    Мир Furla
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-content-tex-th2">
+                    Компания
+                    <br>
+                    Об интернет-магазине
+                    <br>
+                    Магазины
+                    <br>
+                    Карьера в Furla
+                    <br>
+                    Контакты
+                </div>
+            </div>
+            <div class="footer-help-and-support">
+                <div class="footer-content-tex-th1">
+                    Помощь и поддержка
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-content-tex-th2">
+                    Доставка
+                    <br>
+                    Способы оплаты
+                    <br>
+                    Установка техники
+                    <br>
+                    Гарантии
+                    <br>
+                    Бренды
+                </div>
+            </div>
+            <div class="footer-privilegies">
+                <div class="footer-content-tex-th1">
+                    Ваши привелегии
+                </div>
+                <hr class="footer-hr">
+                <div class="footer-content-tex-th2">
+                    Акции
+                    <br>
+                    Бонусная программа
+                    <br>
+                    Баланс бонусной карты
+                    <br>
+                    VIP Сервис
+                    <br>
+                    Подарочные карты 
+                </div>
+            </div>
+    </footer>
+
+    <script>
+        var search = document.getElementById('search');
+        var btn = document.getElementById('search-btn');
+        var list = document.getElementById('search-list');
+
+        search.addEventListener('click', () => {
+            list.classList.toggle('active');
+        })
+
+        function loadSearch() {
+            list.innerHTML = localStorage.getItem('search')
+        }
+
+        loadSearch()
+
+        function saveSearch() {
+            localStorage.setItem('search', list.innerHTML)
+        }
+
+        btn.addEventListener('click', () => {
+            list.innerHTML += '<div class=\'search-list__item\' data-elem="'+search.value+'"><span>' + search.value + '</span><span data-elem="'+search.value+'">X</span></div>';
+            search.value = '';
+            saveSearch()
+        });
+
+        list.addEventListener('click', (e) => {
+
+            if (e.srcElement.innerHTML === 'X') {
+                [...list.children].forEach(element => {
+                    if(element.dataset['elem'] === e.srcElement.dataset['elem']) {
+                        list.removeChild(element)
+                        saveSearch()
+                    }
+                });
+            } else {
+                search.value = e.srcElement.innerHTML
+            }
+        });
+
+    </script>
+</body>
+</html>
